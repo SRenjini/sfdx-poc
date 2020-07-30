@@ -42,7 +42,7 @@ node {
 			   	//rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:mdapi:deploy -x manifest/package.xml -u ${HUB_ORG}"
 				//rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -p force-app/. -u ${HUB_ORG}"
                 //rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -p .sfdx/. -u ${HUB_ORG}"
-                rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:push -u ${HUB_ORG}"
+                rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -x manifest/package.xml  -u ${HUB_ORG}"
 			}
 			  
             printf rmsg
