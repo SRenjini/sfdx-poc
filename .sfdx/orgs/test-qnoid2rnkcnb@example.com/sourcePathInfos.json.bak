@@ -1,0 +1,212 @@
+[
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105640955,
+            "changeTime": 1596105640955,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105640955,
+            "changeTime": 1596105640955,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105640959,
+            "changeTime": 1596105640959,
+            "contentHash": "3a255ff489cff7ad29aac5620772096648592233",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105640958,
+            "changeTime": 1596105640958,
+            "contentHash": "0216c6018adcd212b194d690f5221377f5bd34d5",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\AccountController.cls",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\AccountController.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 350,
+            "modifiedTime": 1596105640956,
+            "changeTime": 1596105640956,
+            "contentHash": "c0158981bf68ebf20eec082a13eeb05f326d31ee",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\AccountController.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\AccountController.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 179,
+            "modifiedTime": 1596105640957,
+            "changeTime": 1596105640957,
+            "contentHash": "9ccb2360e3c7b4c10910adb7e3465391553e08bb",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\ContactController.cls",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\ContactController.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 187,
+            "modifiedTime": 1596105640958,
+            "changeTime": 1596105640958,
+            "contentHash": "ba1f7c6b763d7a5022d9519300457abbfe192522",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\ContactController.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\classes\\ContactController.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 179,
+            "modifiedTime": 1596105640958,
+            "changeTime": 1596105640958,
+            "contentHash": "9ccb2360e3c7b4c10910adb7e3465391553e08bb",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105640960,
+            "changeTime": 1596105640960,
+            "contentHash": "3f1794a87460d51e84046429381637e153b39abe",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105640980,
+            "changeTime": 1596105640980,
+            "contentHash": "3cd1b841845d7ef004acc8d2005d63db33e4d850",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp\\sampleComp.html",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp\\sampleComp.html",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 59,
+            "modifiedTime": 1596105640960,
+            "changeTime": 1596105640960,
+            "contentHash": "d14c3f0e1f9ddf196dcea49bf8e20ccaeae9d767",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp\\sampleComp.js",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp\\sampleComp.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1596105640961,
+            "changeTime": 1596105640961,
+            "contentHash": "f84574ce06121949d0c070542362b3fe0120425f",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp\\sampleComp.js-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc\\force-app\\main\\default\\lwc\\sampleComp\\sampleComp.js-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 212,
+            "modifiedTime": 1596105640980,
+            "changeTime": 1596105640980,
+            "contentHash": "4624ac31717d2da8d749902ccd70f9bb3dc82ff6",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "c:\\Users\\CR Nair\\Dev1\\sfdx-poc",
+        {
+            "state": "n",
+            "sourcePath": "c:\\Users\\CR Nair\\Dev1\\sfdx-poc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1596105641022,
+            "changeTime": 1596105672815,
+            "contentHash": "2cd2e680a7c9302e78123a9fb97de3c16572fbdf",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ]
+]
