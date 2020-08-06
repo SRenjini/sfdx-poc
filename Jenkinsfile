@@ -4,7 +4,7 @@ node {
 
     def BUILD_NUMBER=env.BUILD_NUMBER
     def SFDC_USERNAME
-    def TEST_LEVEL='RunLocalTests'
+	def TEST_LEVEL='RunLocalTests'
 
     def HUB_ORG=env.HUB_ORG_DH
     def SFDC_HOST = env.SFDC_HOST_DH
@@ -37,7 +37,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Authorize DevHub') {
-                rc = command "${toolbelt}/sfdx force:auth:logout --targetusername ${HUB_ORG} -p & ${toolbelt}/sfdx force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --instanceurl ${SFDC_HOST}"
+                rc = command "\"${toolbelt}\" force:auth:logout --targetusername ${HUB_ORG} -p & \"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --instanceurl ${SFDC_HOST}"
                 if (rc != 0) { error 'hub org authorization failed'}
                 println rc
             }
@@ -47,7 +47,7 @@ node {
             // Create new scratch org to test your code.
             // -------------------------------------------------------------------------
             stage('Create Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:org:create --targetdevhubusername ${HUB_ORG} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
+                rc = command "\"${toolbelt}\" force:org:create --targetdevhubusername ${HUB_ORG} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
                 if (rc != 0) {
                     error 'Salesforce test scratch org creation failed.'
                 }
@@ -58,7 +58,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Display Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:org:display --targetusername ciorg"
+                rc = command "\"${toolbelt}\" force:org:display --targetusername ciorg"
                 if (rc != 0) {
                     error 'Salesforce test scratch org display failed.'
                 }
@@ -69,7 +69,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Push To Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:source:push --targetusername ciorg"
+                rc = command "\"${toolbelt}\" force:source:push --targetusername ciorg"
                 if (rc != 0) {
                     error 'Salesforce push to test scratch org failed.'
                 }
@@ -80,7 +80,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Run Tests In Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:apex:test:run --targetusername ciorg --wait 10 --resultformat tap --codecoverage --testlevel ${TEST_LEVEL}"
+                rc = command "\"${toolbelt}\" force:apex:test:run --targetusername ciorg --wait 10 --resultformat tap --codecoverage --testlevel ${TEST_LEVEL}"
                 if (rc != 0) {
                     error 'Salesforce unit test run in test scratch org failed.'
                 }
@@ -91,7 +91,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Delete Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:org:delete --targetusername ciorg --noprompt"
+                rc = command "\"${toolbelt}\" force:org:delete --targetusername ciorg --noprompt"
                 if (rc != 0) {
                     error 'Salesforce test scratch org deletion failed.'
                 }
@@ -115,23 +115,4 @@ node {
     } else {
         return bat(returnStatus: true, script: script);
     }
-    }
-
- 
-            
-            
-
-			
-			
-	        
-			
-	  
-			
-            
-			
-            
-			
-            
-			
-	       
-
+	    
