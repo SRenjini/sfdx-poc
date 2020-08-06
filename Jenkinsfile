@@ -3,9 +3,8 @@ import groovy.json.JsonSlurperClassic
 node {
 
     def BUILD_NUMBER=env.BUILD_NUMBER
-    def RUN_ARTIFACT_DIR="tests/${BUILD_NUMBER}"
     def SFDC_USERNAME
-	def TEST_LEVEL='RunLocalTests'
+    def TEST_LEVEL='RunLocalTests'
 
     def HUB_ORG=env.HUB_ORG_DH
     def SFDC_HOST = env.SFDC_HOST_DH
@@ -18,6 +17,7 @@ node {
     println SFDC_HOST
     println CONNECTED_APP_CONSUMER_KEY
     def toolbelt = tool 'toolbelt'
+    
 
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command
@@ -31,34 +31,29 @@ node {
 
 
     withCredentials([file(credentialsId: JWT_KEY_CRED_ID, variable: 'jwt_key_file')]) {
-
- 
+            
             // -------------------------------------------------------------------------
             // Authorize the Dev Hub org with JWT key and give it an alias.
             // -------------------------------------------------------------------------
 
-	    stage('Authorize DevHub') {
-                rc = command "\"${toolbelt}\" force:auth:logout --targetusername ${HUB_ORG} -p & \"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
-            	//rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
-			}
+            stage('Authorize DevHub') {
+                rc = command "${toolbelt}/sfdx force:auth:logout --targetusername ${HUB_ORG} -p & ${toolbelt}/sfdx force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --instanceurl ${SFDC_HOST}"
+                if (rc != 0) { error 'hub org authorization failed'}
+                println rc
+            }
 		
-            if (rc != 0) { error 'hub org authorization failed' }
-
-			println rc
-			}
-			
-	    // -------------------------------------------------------------------------
+            
+            // -------------------------------------------------------------------------
             // Create new scratch org to test your code.
             // -------------------------------------------------------------------------
-			
-	  stage('Create Test Scratch Org') {
+            stage('Create Test Scratch Org') {
                 rc = command "${toolbelt}/sfdx force:org:create --targetdevhubusername ${HUB_ORG} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
                 if (rc != 0) {
                     error 'Salesforce test scratch org creation failed.'
                 }
             }
-			
-	    // -------------------------------------------------------------------------
+            
+            // -------------------------------------------------------------------------
             // Display test scratch org info.
             // -------------------------------------------------------------------------
 
@@ -68,8 +63,8 @@ node {
                     error 'Salesforce test scratch org display failed.'
                 }
             }
-			
-	     // -------------------------------------------------------------------------
+            
+            // -------------------------------------------------------------------------
             // Push source to test scratch org.
             // -------------------------------------------------------------------------
 
@@ -79,8 +74,8 @@ node {
                     error 'Salesforce push to test scratch org failed.'
                 }
             }
-			
-	    // -------------------------------------------------------------------------
+            
+            // -------------------------------------------------------------------------
             // Run unit tests in test scratch org.
             // -------------------------------------------------------------------------
 
@@ -90,8 +85,8 @@ node {
                     error 'Salesforce unit test run in test scratch org failed.'
                 }
             }
-			
-	    // -------------------------------------------------------------------------
+            
+            // -------------------------------------------------------------------------
             // Delete test scratch org.
             // -------------------------------------------------------------------------
 
@@ -101,28 +96,42 @@ node {
                     error 'Salesforce test scratch org deletion failed.'
                 }
             }
-
-
-			stage('Deploy Code'){
-			// need to pull out assigned username
-			if (isUnix()) {
-				rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
-			}else{
-			   	//rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:mdapi:deploy -x manifest/package.xml -u ${HUB_ORG}"
-				//rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -p force-app/. -u ${HUB_ORG}"
-                //rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -p .sfdx/. -u ${HUB_ORG}"
+            
+            // -------------------------------------------------------------------------
+            // Deploy code to destination
+            // -------------------------------------------------------------------------
+            
+            stage('Deploy Code'){
                 rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -x manifest/package.xml  -u ${HUB_ORG}"
-			}
-			  
-            printf rmsg
-            println('Hello from a Job DSL script!')
-            println(rmsg)
-			}
+                printf rmsg
+                println(rmsg)
+            }
+            
+        }
     }
-def command(script) {
+    def command(script) {
     if (isUnix()) {
         return sh(returnStatus: true, script: script);
     } else {
         return bat(returnStatus: true, script: script);
     }
-}
+    }
+
+ 
+            
+            
+
+			
+			
+	        
+			
+	  
+			
+            
+			
+            
+			
+            
+			
+	       
+
