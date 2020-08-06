@@ -102,7 +102,8 @@ node {
             // -------------------------------------------------------------------------
             
             stage('Deploy Code'){
-                rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -x manifest/package.xml  -u ${HUB_ORG}"
+                //rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy -x manifest/package.xml  -u ${HUB_ORG}"
+		rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
                 printf rmsg
                 println(rmsg)
             }
