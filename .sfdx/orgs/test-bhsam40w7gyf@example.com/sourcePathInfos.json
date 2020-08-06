@@ -43,17 +43,16 @@
     },
     "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes": {
         "sourcePath": "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes",
-        "deferContentHash": false,
         "isWorkspace": false,
-        "isArtifactRoot": false,
-        "state": "u",
         "package": "force-app",
+        "deferContentHash": true,
+        "state": "u",
         "isDirectory": true,
         "isMetadataFile": false,
         "size": 0,
-        "modifiedTime": 1596724397184,
-        "changeTime": 1596724397184,
-        "contentHash": "6ff40ffe718cbfa85671c0aa8cca99d2f4e63e1e"
+        "modifiedTime": 1596724790321,
+        "changeTime": 1596724790321,
+        "contentHash": "23c3a3dd006847a055eec6a6aa885ed478b40555"
     },
     "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\AccountController.cls": {
         "sourcePath": "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\AccountController.cls",
@@ -117,18 +116,17 @@
     },
     "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactController.cls": {
         "sourcePath": "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactController.cls",
-        "deferContentHash": false,
+        "metadataType": "ApexClass",
         "isWorkspace": false,
-        "isArtifactRoot": false,
-        "state": "u",
         "package": "force-app",
+        "deferContentHash": true,
+        "state": "u",
         "isDirectory": false,
         "isMetadataFile": false,
-        "metadataType": "ApexClass",
-        "size": 187,
-        "modifiedTime": 1596724211163,
-        "changeTime": 1596724211163,
-        "contentHash": "ba1f7c6b763d7a5022d9519300457abbfe192522"
+        "size": 188,
+        "modifiedTime": 1596725314225,
+        "changeTime": 1596725314225,
+        "contentHash": "d3f6af09dee2911260f8163d6a8ad7e10b1d97c1"
     },
     "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactController.cls-meta.xml": {
         "sourcePath": "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactController.cls-meta.xml",
@@ -303,5 +301,31 @@
         "modifiedTime": 1596724211196,
         "changeTime": 1596724211196,
         "contentHash": "2cd2e680a7c9302e78123a9fb97de3c16572fbdf"
+    },
+    "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactControllerTest.cls": {
+        "sourcePath": "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactControllerTest.cls",
+        "deferContentHash": false,
+        "state": "u",
+        "package": "force-app",
+        "isDirectory": false,
+        "isMetadataFile": false,
+        "metadataType": "ApexClass",
+        "size": 447,
+        "modifiedTime": 1596725234771,
+        "changeTime": 1596725234771,
+        "contentHash": "e75a33430c93a2c5bb561cc81702a8d35c85d5fb"
+    },
+    "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactControllerTest.cls-meta.xml": {
+        "sourcePath": "c:\\Users\\CR Nair\\Documents\\sfdx-poc-1\\force-app\\main\\default\\classes\\ContactControllerTest.cls-meta.xml",
+        "deferContentHash": false,
+        "state": "u",
+        "package": "force-app",
+        "isDirectory": false,
+        "isMetadataFile": true,
+        "metadataType": "ApexClass",
+        "size": 174,
+        "modifiedTime": 1596724790322,
+        "changeTime": 1596724790322,
+        "contentHash": "b14927db8433719a949fb732f84be0e1c5bd19cd"
     }
 }

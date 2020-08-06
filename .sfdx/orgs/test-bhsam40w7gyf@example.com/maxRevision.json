@@ -1,8 +1,8 @@
 {
-    "serverMaxRevisionCounter": 12,
+    "serverMaxRevisionCounter": 19,
     "sourceMembers": {
         "Profile__Admin": {
-            "serverRevisionCounter": 3,
+            "serverRevisionCounter": 17,
             "lastRetrievedFromServer": null,
             "memberType": "Profile",
             "isNameObsolete": false
@@ -32,8 +32,8 @@
             "isNameObsolete": false
         },
         "ApexClass__ContactController": {
-            "serverRevisionCounter": 6,
-            "lastRetrievedFromServer": 6,
+            "serverRevisionCounter": 18,
+            "lastRetrievedFromServer": 18,
             "memberType": "ApexClass",
             "isNameObsolete": false
         },
@@ -59,6 +59,12 @@
             "serverRevisionCounter": 10,
             "lastRetrievedFromServer": 10,
             "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "ApexClass__ContactControllerTest": {
+            "serverRevisionCounter": 19,
+            "lastRetrievedFromServer": 19,
+            "memberType": "ApexClass",
             "isNameObsolete": false
         }
     }
