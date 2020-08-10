@@ -53,8 +53,8 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Deploy and Run Tests') {
-		    //rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} -l ${TEST_LEVEL}"
-			rc = command "\"${toolbelt}\" force:source:deploy  -p force-app/. -u ${HUB_ORG} -l ${TEST_LEVEL}"
+		    rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} -l ${TEST_LEVEL}"
+			//rc = command "\"${toolbelt}\" force:source:deploy  -p force-app/. -u ${HUB_ORG} -l ${TEST_LEVEL}"
 		    if (rc != 0) {
 			error 'Salesforce deploy and test run failed.'
 		    }
@@ -67,7 +67,7 @@ node {
 
 		//stage('Check Only Deploy') {
 		//    rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} --testlevel ${TEST_LEVEL}"
-		rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy   -u ${HUB_ORG}"
+		//rmsg = bat returnStdout: true, script:"\"${toolbelt}\" force:source:deploy   -u ${HUB_ORG}"
 		//    if (rc != 0) {
 		//        error 'Salesforce deploy failed.'
 		//    }
