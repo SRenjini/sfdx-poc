@@ -41,7 +41,7 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Authorize to Salesforce') {
-			rc = command "\"${toolbelt}\" force:auth:logout --targetusername ${HUB_ORG} -p & \"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\ --setalias QA --instanceurl ${SFDC_HOST}"
+			rc = command "\"${toolbelt}\" force:auth:logout --targetusername ${HUB_ORG} -p & \"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setalias QA --instanceurl ${SFDC_HOST}"
                 if (rc != 0) { error 'Salesforce org authorization failed.'}
                 println rc
 		}
