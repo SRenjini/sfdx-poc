@@ -53,7 +53,7 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Deploy and Run Tests') {
-		    rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml --targetusername QA --testlevel ${TEST_LEVEL}"
+		    rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} -l ${TEST_LEVEL}"
 		    if (rc != 0) {
 			error 'Salesforce deploy and test run failed.'
 		    }
