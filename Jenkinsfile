@@ -8,7 +8,7 @@ node {
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 	//def TEST_LEVEL='RunLocalTests'
 	def TEST_LEVEL= 'RunSpecifiedTests'
-	def TEST_CLASSES = "AccountControllerTest,ContactControllerTest.cls"
+	def TEST_CLASSES = "AccountControllerTest,ContactControllerTest"
 
     println 'KEY IS' 
     println JWT_KEY_CRED_ID
