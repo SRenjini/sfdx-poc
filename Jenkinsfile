@@ -6,7 +6,8 @@ node {
     def SFDC_HOST = env.SFDC_HOST_DH
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
-	def TEST_LEVEL='RunLocalTests'
+	//def TEST_LEVEL='RunLocalTests'
+	def TEST_LEVEL= 'AccountControllerTest','ContactControllerTest'
 
     println 'KEY IS' 
     println JWT_KEY_CRED_ID
@@ -53,7 +54,8 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Deploy and Run Tests') {
-		    rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} -l ${TEST_LEVEL}"
+		    //rc = command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} -l ${TEST_LEVEL}"
+			rc=command "\"${toolbelt}\" force:source:deploy  -x manifest/package.xml -u ${HUB_ORG} -r ${TEST_LEVEL}"
 		    //rc = command "\"${toolbelt}\" force:source:deploy  -p force-app/. -u ${HUB_ORG} -l ${TEST_LEVEL}"
 		    if (rc != 0) {
 			error 'Salesforce deploy and test run failed.'
